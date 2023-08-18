@@ -23,8 +23,8 @@ let initialState = {
   
 
 
-const crudSlice = createSlice({
-    name: "crudblog",
+const kioskSlice = createSlice({
+    name: "kiosk",
     initialState,
    reducers:{
    },
@@ -34,7 +34,7 @@ const crudSlice = createSlice({
   });
 
 
-  export default crudSlice.reducer;
+  export default kioskSlice.reducer;
 // export const {clearState}=crudSlice.actions;
   
   
