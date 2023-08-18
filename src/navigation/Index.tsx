@@ -1,20 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
-import { NavigationContainer } from '@react-navigation/native'
-import BrandSelect from '../components/brandSelector/Index'
-import BrandSelected from '../components/brandSelected/Index'
-
+import {StyleSheet} from 'react-native';
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import WelcomeScreen from '../screens/welcome/index';
 export default function RootNavigation() {
-    const Stack=createStackNavigator()
+  const Stack = createStackNavigator();
   return (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='brandSelector'>
-            <Stack.Screen name="brandSelector" options={{headerShown:false}} component={BrandSelect}></Stack.Screen>
-            <Stack.Screen name="brandSelected" component={BrandSelected}></Stack.Screen>
-        </Stack.Navigator>
+      <Stack.Navigator initialRouteName="brandSelector">
+        <Stack.Screen
+          name="WelcomeScreen"
+          options={{headerShown: false}}
+          component={WelcomeScreen}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
-  )
+  );
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
